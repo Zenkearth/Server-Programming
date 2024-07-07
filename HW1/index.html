@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Mukdahan Provincial Sports Association</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>ใบสมัครสมาชิก<br>สมาคมกีฬาจังหวัดมุกดาหาร</h1>
+            <div class="frame">
+                <input type="file" accept="image/jpeg, image/png" onchange="loadFile(event)">
+                <p id="upload_area" style="font-size: 10px;">คลิกเพื่ออัปโหลดรูปภาพ</p>
+                <img id="output">
+            </div>
+            <div class="date_input">
+                <label for="date">วันที่</label>
+                <input type="date" name="date" id="date">
+            </div>
+        </header>
+        <main class="form">
+            <h2>เรื่อง ขอสมัครเข้าเป็นสมาชิกสมาคมกีฬาจังหวัดมุกดาหาร</h2>
+            <h2>เรียน นายกสมาคมกีฬาจังหวัดมุกดาหาร</h2>
+            <div class="paragraph">
+                <label for="name_surname">ข้าพเจ้า</label>
+                <input type="text" id="name_surname" name="name_surname">
+                <label for="age"> อายุ</label>
+                <select id="age">
+                    <option value="0"></option>
+                    <script>
+                        for (let i = 15; i <= 120; i++) {
+                            document.write(`<option value="${i}">${i}</option>`)
+                        }
+                    </script>
+                </select> ปี
+                <label for="seat">ในนาม (ระบุตำแหน่งและชื่อหน่วยงานที่สมัคร)</label>
+            </div>
+            <div>
+                <input type="text" id="seat">
+                <label for="date_of_birth"> เกิดวันที่ </label>
+                <input type="date" id="date_of_birth">
+            </div>
+            <div>
+                <label for="addr_num">อยู่บ้านเลขที่</label>
+                <input type="text" id="addr_num">
+                <label for="village">หมู่</label>
+                <input type="text" id="village">
+                <label for="alley">ซอย</label>
+                <input type="text" id="alley">
+                <label for="road">ถนน</label>
+                <input type="text" id="road">
+            </div>
+            <div>
+                <label for="sub_district">ตำบล</label>
+                <input type="text" id="sub_district">
+                <label for="district">อำเภอ</label>
+                <input type="text" id="district">
+                <label for="province">จังหวัด</label>
+                <input type="text" id="province">
+                <label for="zip_code">รหัสไปรษณีย์</label>
+                <input type="text" id="zip_code" minlength="5" maxlength="5">
+            </div>
+            <div>
+                <label for="occupation">อาชีพ</label>
+                <input type="text" id="occupation">
+                <label for="workplace">ทำงานที่</label>
+                <input type="text" id="workplace">
+            </div>
+            <div>
+                <label for="phone">เบอร์โทรศัพท์บ้าน/ที่ทำงาน</label>
+                <input type="tel" id="phone" placeholder="0xx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    maxlength="12" required>
+                <label for="mobile_phone">หมายเลขโทรศัพท์มือถึอ</label>
+                <input type="tel" id="mobile_phone" placeholder="0xx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    maxlength="12" required>
+            </div>
+            <h2>ขอสมัครเข้าเป็นสมาชิกสมาคมกีฬาจังหวัดมุกดาหาร</h2>
+            <div class="paragraph" id="type">
+                ประเภท
+                <span class="toggle">
+                    <span id="togg1">
+                        <input type="radio" id="type1" name="type" onclick="toggleAddiInfo()">
+                        <label for="type1">สามัญ (ระบุชื่อ หน่วยงาน ที่สมัคร) </label>
+                        <input type="text" id="etc" name="etc">
+                    </span>
+                    <span id="togg2">
+                        <input type="radio" id="type2" name="type" onclick="toggleAddiInfo()">
+                        <label for="type2"> วิสามัญ</label>
+                    </span>
+                    <script>
+                        function toggleAddiInfo() {
+                            let typeToggle = document.getElementById("type1").checked;
+                            let additional_box = document.getElementById('etc');
+                            console.log(typeToggle);
+                            if (typeToggle) {
+                                additional_box.style.display = 'inline';
+                            }
+                            else {
+                                additional_box.style.display = 'none';
+                            }
+                        }
+                    </script>
+                </span>
+            </div>
+            
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
