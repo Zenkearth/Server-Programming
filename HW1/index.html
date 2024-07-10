@@ -16,6 +16,17 @@
                 <input type="file" accept="image/jpeg, image/png" onchange="loadFile(event)">
                 <p id="upload_area" style="font-size: 10px;">คลิกเพื่ออัปโหลดรูปภาพ</p>
                 <img id="output">
+                <script>
+                    let loadFile = function (event) {
+                        let image = document.getElementById('output');
+                        let loadText = document.getElementById('upload_area');
+                        image.src = URL.createObjectURL(event.target.files[0]);
+                        loadText.textContent = '';
+                        image.onload = function () {
+                            URL.revokeObjectURL(image.src)
+                        }
+                    };
+                </script>
             </div>
             <div class="date_input">
                 <label for="date">วันที่</label>
