@@ -106,10 +106,96 @@
                     </script>
                 </span>
             </div>
-            
+            <div class="text1">
+                <div style="text-indent: .5in;">
+                    ข้าพเจ้าได้ศึกษาทำความเข้าใจในข้อบังคับของสมาคมกีฬาตังหวัดมุกดาหารโดยละเอียดแล้ว
+                    ยินดีปฏิบัติตามข้อบังคับของสมาคมกีฬาจังหวัดมุกดาหาร
+                    และให้ความร่วมมือในกิจการของสมาคมกีฬาจังหวัดมุกดาหารทุกประการ ข้าพเจ้าได้ส่งหลักฐานดังนี้
+                </div>
+            </div>
+            <div class="paragraph">
+                <span id="togg3">
+                    <input type="radio" id="type3" name="type1" onclick="toggleAddiInfo1()">
+                    <label for="type3"> สำเนาบัตรประชาชนหรือบัตราชการ และ สำเนาทะเบียนบ้าน</label><br>
+                </span>
+                <span id="togg4">
+                    <input type="radio" id="type4" name="type1" onclick="toggleAddiInfo1()">
+                    <label for="type4"> รูปถ่าย 1 นิ่ว จำนวน 2 รูป</label><br>
+                </span>
+                <span id="togg5">
+                    <input type="radio" id="type5" name="type1" onclick="toggleAddiInfo1()">
+                    <label for="type5"> ค่าลงทะเบียนครั่งแรก</label><br>
+                </span>
+                <span id="togg6">
+                    <input type="radio" id="type6" name="type1" onclick="toggleAddiInfo1()">
+                    <label for="type6"> ค่าบำรุงในการสมาชิกสมาคมฯ ประเภทสมาชิกวิสมัญ เป็นรายปีๆ ละ 100- บาท</label><br>
+                </span>
+                <span id="togg7">
+                    <input type="radio" id="type7" name="type1" onclick="toggleAddiInfo1()">
+                    <label for="type7"> ค่าบำรุงในการสมาชิกสมาคมฯ ประเภทสมาชิกสมัญ เป็นรายปีๆ ละ 300- บาท</label><br>
+                </span>
+                <span id="togg8">
+                    <input type="radio" id="type8" name="type1" onclick="toggleAddiInfo1()">
+                    <label for="type8">อื่นๆ </label>
+                    <input type="text" id="rex" name="rex">
+                </span>
+                <script>
+                    function toggleAddiInfo1() {
+                        let typeToggle = document.getElementById("type8").checked;
+                        let additional_box = document.getElementById('rex');
+                        console.log(typeToggle);
+                        if (typeToggle) {
+                            additional_box.style.display = 'inline';
+                        }
+                        else {
+                            additional_box.style.display = 'none';
+                        }
+                    }
+                </script>
+            </div>
+            <span class="paragraph">
+                จึงเรียนมาเพื่อโปรดทราบและดำเนินการต่อไป
+            </span>
+            <div class="nm">
+                <span>
+                    <label for="surname">ลงชื่อ</label>
+                    <input type="text" id="surname"><br>
+                </span>
+                <span>
+                    <label for="surname">ตำแหน่ง</label>
+                    <input type="text" id="surname">
+                </span>
+            </div>
+            <div class="hh">
+                <hr width="800px" size="5" noshade>
+            </div>
+            <div class="paragraph" style="font-weight: bold;">
+                ความเห็นของคณะกรรมการสมาคมกีฬาจังหวัดมุกดาหาร
+            </div>
+            <div class="poin">
+                <span id="togg8">
+                    <input type="radio" id="type9" name="type2" onclick="toggleAddiInfo1()">
+                    <label for="type9"> รับไว้เป็นสมาชิก</label>
+                    <input type="radio" id="type10" name="type2" onclick="toggleAddiInfo1()">
+                    <label for="type10"> ไม่รับ</label>
+                </span>
+            </div>
+            <div class="zz">
+                <span>
+                    <label for="surname">ลงชื่อ</label>
+                    <input type="text" id="surname"><br>
+                </span>
+            </div>
+            <div class="bb">
+                <span>
+                    (นาย เอกอมร ศรีลาศักดิ์)
+                </span>
+            </div>
+            <div class="aa">
+                นายกสมาคมกีฬาจังหวัดมุกดาหาร
+            </div>
         </main>
     </div>
-    <script src="script.js"></script>
 </body>
 
 </html>
